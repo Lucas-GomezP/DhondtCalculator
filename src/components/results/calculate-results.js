@@ -1,5 +1,3 @@
-import { DataParticipant } from "../../types/types";
-
 export function calculateValuesResults({positions, participants}) {
   const result = []
   const length = participants.length

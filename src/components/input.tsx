@@ -5,13 +5,13 @@ export default function Input({id, title, type="text", catchData=() => {}}: {id:
     if (type === "text") catchData(data)
   }
   return (
-    <label htmlFor={id} className="flex flex-col w-full px-2">{title}
+    <label htmlFor={id} className="flex flex-col w-full">{title}
       <input
         type={type}
         id={id}
-       name={id}
+        name={id}
         onChange={(e) => handleChange(e)}
-       className="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg p-2"
+        className="text-center bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg p-2"
       />
     </label>
   )

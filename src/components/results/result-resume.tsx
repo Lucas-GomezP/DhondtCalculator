@@ -10,19 +10,25 @@ export default function ResultResume() {
     setResumeOcupated(newResumeOcupated)
 
   }, [positions, participants])
+
+  if (!resumOcupated || participants[0].name === "" || positions === 0) return (<></>)
+
   return (
-    <table className="w-full">
-      <thead>
-        <tr className="text-center bg-slate-200">
-          <th>Participante</th>
-          <th>Bancas ocupadas</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          resumOcupated && Object.keys(resumOcupated).map((key) => <tr className="text-center even:bg-slate-200" key={key}><td>{key}</td><td>{resumOcupated[key]}</td></tr>)
-        }
-      </tbody>
-    </table>
+    <>
+      <p className="font-bold">Resumen general</p>
+      <table className="w-full">
+        <thead>
+          <tr className="text-center bg-slate-200">
+            <th>Participante</th>
+            <th>Bancas ocupadas</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            resumOcupated && Object.keys(resumOcupated).map((key) => <tr className="text-center even:bg-slate-200" key={key}><td>{key}</td><td>{resumOcupated[key]}</td></tr>)
+          }
+        </tbody>
+      </table>
+    </>
   )
 }

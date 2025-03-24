@@ -9,7 +9,6 @@ export default function PositionsToFillContainer() {
   const {setPositions} = useDhondtContext()
   const handlePositionsToFill = (data: DataInput) => {
     let newPositions = data
-    console.log(newPositions)
     if (!newPositions) newPositions = 0
     setPositionsToFill(newPositions)
   }

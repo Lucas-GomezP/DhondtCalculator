@@ -28,7 +28,6 @@ export function calculateValuesResults({positions, participants}: {positions: Da
 
 
   for (let i = 0; i < result.length; i++) {
-    console.log(result[i])
     result[i].unshift({id: crypto.randomUUID(), name: `Posición ${i + 1}`,value: i + 1})
   }
   return {result, ocupatedPositionsIds, resumeOcupated}

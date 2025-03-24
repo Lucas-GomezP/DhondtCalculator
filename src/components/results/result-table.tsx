@@ -14,7 +14,7 @@ export default function ResultTable() {
     setOcupatedPositionsIds(newOcupatedPositionsIds)
   }, [positions, participants])
 
-  if (result.length === 0 || participants[0].name === "" || positions === 0) return (<><p className="text-red-500 italic">Complete los campos previos para ver un resultado</p></>)
+  if (result.length === 0 || participants[0].name === "" || positions === 0) return (<><p className="text-red-500 italic text-center">Complete los campos previos para ver un resultado</p></>)
 
   return (
     <table className="w-full">

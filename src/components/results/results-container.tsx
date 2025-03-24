@@ -6,7 +6,6 @@ export default function ResultsContainer() {
   return (
     <SectionContainer title="Resultados">
       <ResultTable />
-      <p className="font-bold">Resumen general</p>
       <ResultResume />
     </SectionContainer>
   )

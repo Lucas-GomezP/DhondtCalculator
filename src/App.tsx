@@ -4,7 +4,7 @@ import Main from "./ui/main"
 
 function App() {
   return (
-    <section className="display">
+    <section className="max-w-screen-xl mx-auto display">
       <Header />
       <Main />
       <Footer />

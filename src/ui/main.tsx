@@ -4,7 +4,7 @@ import ResultsContainer from "../components/results/results-container";
 
 export default function Main() {
   return (
-    <main className="[grid-area:main] p-2 flex flex-col gap-2">
+    <main className="[grid-area:main] p-2">
       <PositionsToFillContainer />
       <ParticipantsContainer />
       <ResultsContainer />

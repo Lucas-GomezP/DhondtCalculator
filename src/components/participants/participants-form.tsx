@@ -1,15 +1,15 @@
 import Input from "../input";
-import { DataInput, DataParticipant } from "../../types/types";
+import { DataParticipant } from "../../types/types";
 import { useEffect, useState } from "react";
 
 export default function ParticipantsForm({id, deleteParticipant, catchData}: {id: string, deleteParticipant: (id:string) => void, catchData: (data: DataParticipant) => void}) {
-  const [nameData, setNameData] = useState<DataInput>("")
-  const [votesData, setVotesData] = useState<DataInput>(0)
-  const handleChangeName = (data: DataInput) => {
+  const [nameData, setNameData] = useState<number | string>("")
+  const [votesData, setVotesData] = useState<number | string>(0)
+  const handleChangeName = (data: number | string) => {
     const newName = data
     setNameData(newName)
   }
-  const handleChangeVotes = (data: DataInput) => {
+  const handleChangeVotes = (data: number | string) => {
     const newVotes = data
     setVotesData(newVotes)
   }

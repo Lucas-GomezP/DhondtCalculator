@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import SectionContainer from "../../ui/section-container";
 import Input from "../input";
-import { DataInput } from "../../types/types";
 import useDhondtContext from "../../context/use-dhondt-context";
 
 export default function PositionsToFillContainer() {
-  const [positionsToFill, setPositionsToFill] = useState<DataInput>(0)
+  const [positionsToFill, setPositionsToFill] = useState<number | string>(0)
   const {setPositions} = useDhondtContext()
-  const handlePositionsToFill = (data: DataInput) => {
+  const handlePositionsToFill = (data: number | string) => {
     let newPositions = data
     if (!newPositions) newPositions = 0
     setPositionsToFill(newPositions)

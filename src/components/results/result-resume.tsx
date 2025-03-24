@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import useDhondtContext from "../../context/use-dhondt-context"
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import { calculateValuesResults } from "./calculate-results"
 
 export default function ResultResume() {
@@ -25,7 +27,24 @@ export default function ResultResume() {
         </thead>
         <tbody>
           {
-            resumOcupated && Object.keys(resumOcupated).map((key) => <tr className="text-center even:bg-slate-200" key={key}><td>{key}</td><td>{resumOcupated[key]}</td></tr>)
+            resumOcupated && 
+              Object.keys(resumOcupated).map((key) =>{
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-expect-error
+                const r = resumOcupated[key]
+                return (
+                <tr
+                  className="text-center even:bg-slate-200"
+                  key={key}
+                >
+                  <td>{key}</td>
+                  <td>
+                    {r}
+                  </td>
+                </tr>
+                )
+              }
+            )
           }
         </tbody>
       </table>

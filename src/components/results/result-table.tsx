@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import useDhondtContext from "../../context/use-dhondt-context"
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import { calculateValuesResults } from "./calculate-results"
 
 type DataResult = {id: string, value: number}

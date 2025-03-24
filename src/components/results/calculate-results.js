@@ -1,11 +1,13 @@
-import { DataInput, DataParticipant } from "../../types/types";
+import { DataParticipant } from "../../types/types";
 
-export function calculateValuesResults({positions, participants}: {positions: DataInput, participants: DataParticipant[]}) {
+export function calculateValuesResults({positions, participants}) {
   const result = []
-  for (let i = 0; i < positions; i++) {
+  const length = participants.length
+  for (let i = 0; i < length; i++) {
     const prevResult = []
     for (let j = 0; j < participants.length; j++) {
-      prevResult.push({id: crypto.randomUUID(), name: participants[j].name,value: Math.floor(participants[j].votes / (i + 1))})
+      const votes = participants[j].votes
+      prevResult.push({id: crypto.randomUUID(), name: participants[j].name,value: Math.floor(votes / (i + 1))})
     }
     result.push(prevResult)
   }

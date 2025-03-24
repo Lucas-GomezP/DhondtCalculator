@@ -1,6 +1,4 @@
-import { DataInput } from "../types/types"
-
-export default function Input({id, title, type="text", catchData=() => {}}: {id: string, title: string, type?: string, catchData: (data: DataInput) => void}) {
+export default function Input({id, title, type="text", catchData=() => {}}: {id: string, title: string, type?: string, catchData: (data: number | string) => void}) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const data = e.target.value
     if (type === "number") catchData(parseInt(data))
